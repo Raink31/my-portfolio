@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: #232537;
+    background-image: url("./../../public/pattern.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

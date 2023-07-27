@@ -13,8 +13,6 @@ export default function LayoutNav() {
           name="description"
           content="Visit my personal website portfolio."
         />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         </style>
@@ -24,8 +22,8 @@ export default function LayoutNav() {
           className={styles.logo}
           priority
           src="/logoYB.png"
-          height={80}
-          width={80}
+          height={60}
+          width={60}
           alt='logo'
         />
         <nav className={styles.nav}>
