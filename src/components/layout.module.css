@@ -1,7 +1,3 @@
-.body {
-    margin: 0;
-}
-
 .container {
     max-width: 100vw;
     padding: 0 0rem;
@@ -15,6 +11,7 @@
     gap: 4rem;
     align-items: center;
     background-color: #3A3A5C;
+    padding: .5rem 12rem;
 }
 .nav {
     display: flex;
@@ -28,4 +25,61 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+.footer {
+    padding: 2rem 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #3A3A5C;
+    color: #F4F5C6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footerDescription {
+    max-width: 18%;
+}
+
+.siteNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.siteNav h2, .socials h2{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.siteNav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.socials {
+    max-width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .6rem;
+}
+
+.socialsLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -24,8 +24,8 @@ export default function LayoutNav() {
           className={styles.logo}
           priority
           src="/logoYB.png"
-          height={80}
-          width={80}
+          height={60}
+          width={60}
           alt='logo'
         />
         <nav className={styles.nav}>
