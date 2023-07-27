@@ -1,8 +1,35 @@
 .container {
-  max-height: 100vh;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.main {
+  padding: 6rem 12rem 6rem 12rem;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+  font-family: "poppins", sans-serif;
+  color: #F4F5C6;
+  font-size: 1.4vw;
+}
+
+.presentation {
+  max-width: 45%;
+}
+
+.presentation strong {
+  font-size: 1.8vw;
+}
+
+.presentation h1,
+.presentation strong {
+  background-image: linear-gradient(45deg, rgba(133, 212, 105, 1) 0%, rgba(244, 245, 198, 1) 80%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
 }
