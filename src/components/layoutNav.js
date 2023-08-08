@@ -19,14 +19,15 @@ export default function LayoutNav() {
         </style>
       </Head>
       <header className={styles.header}>
-        <Image
-          className={styles.logo}
-          priority
-          src="/logo.png"
-          height={80}
-          width={80}
-          alt='logo'
-        />
+        <Link href="/" className={styles.logo}> 
+          <Image
+            priority
+            src="/logo.png"
+            height={80}
+            width={80}
+            alt='logo'
+          />
+        </Link>
         <nav className={styles.nav}>
           <Link href="/">About</Link>
           <Link href="/work">Work</Link>
