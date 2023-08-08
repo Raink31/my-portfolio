@@ -13,7 +13,7 @@ export default function Home() {
     <div className={homeStyles.container}>
       <LayoutNav />
       <main className={homeStyles.main}>
-        <h1>About</h1>
+        <h1>Experience</h1>
       </main>
     </div>
   )

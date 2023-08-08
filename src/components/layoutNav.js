@@ -8,7 +8,8 @@ export default function LayoutNav() {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href='/logo.ico' />
+        <title>Yohan Baes's Portfolio</title>
+        <link rel="icon" href='/logowhite.ico' />
         <meta
           name="description"
           content="Visit my personal website portfolio."
@@ -21,16 +22,16 @@ export default function LayoutNav() {
         <Image
           className={styles.logo}
           priority
-          src="/logoYB.png"
-          height={60}
-          width={60}
+          src="/logo.png"
+          height={80}
+          width={80}
           alt='logo'
         />
         <nav className={styles.nav}>
-          <Link href="./pages/index.js">Home</Link>
-          <Link href="./pages/index.js">Blog</Link>
-          <Link href="./pages/index.js">Art</Link>
-          <Link href="./pages/index.js">Work</Link>
+          <Link href="/">About</Link>
+          <Link href="/work">Work</Link>
+          <Link href="/experience">Experience</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </header>
     </div>

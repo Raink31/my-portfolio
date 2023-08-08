@@ -7,11 +7,9 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: 4rem;
+    justify-content: space-between;
     align-items: center;
-    background-color: #3A3A5C;
-    padding: .5rem 12rem;
+    padding: .8rem 12rem;
 }
 .nav {
     display: flex;
@@ -21,10 +19,10 @@
 }
 
 .nav a{
-    color: #F4F5C6;
+    color: #47585C;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .footer {
