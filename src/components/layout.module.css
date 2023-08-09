@@ -18,6 +18,10 @@
     gap: 3rem;
 }
 
+.active {
+    background-color: yellow;
+}
+
 .nav a{
     color: #47585C;
     opacity: 70%;
@@ -107,3 +111,5 @@
 .logo {
     height: 80px;
 }
+
+

@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from './layout.module.css'
 
 export default function LayoutNav() {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,10 +33,10 @@ export default function LayoutNav() {
           />
         </Link>
         <nav className={styles.nav}>
-          <Link href="/">About</Link>
-          <Link href="/work">Work</Link>
-          <Link href="/experience">Experience</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" className={currentRoute === "/" ? styles.active : styles.nonActive}>About</Link>
+          <Link href="/work" className={currentRoute === "/work" ? styles.active : styles.nonActive}>Work</Link>
+          <Link href="/experience" className={currentRoute === "/experience" ? styles.active : styles.nonActive}>Experience</Link>
+          <Link href="/contact" className={currentRoute === "/contact" ? styles.active : styles.nonActive}>Contact</Link>
         </nav>
       </header>
     </div>
