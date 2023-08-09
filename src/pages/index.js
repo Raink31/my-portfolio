@@ -20,7 +20,18 @@ export default function Home() {
     <div className={`${homeStyles.container}`}>
       <LayoutNav />
       <main className={`${homeStyles.main} ${isVisible && homeStyles.visible}`}>
-        <h1>About</h1>
+        <section className={homeStyles.section1}>
+          <Image
+            priority
+            src="/yohan.png"
+            height={460}
+            width={460}
+            alt="Yohan's Photo"
+          />
+          <h1 className={homeStyles.h1}>FRONTEND<br /><span>DEVELOPER</span></h1>
+          <p className={homeStyles.myDescription}>Hi there ! My name is <a href="https://github.com/Raink31">Yohan</a> 👋. I’m a self-taught developer based in France, and Ilike to create beautiful interfaces with excellent usability. 
+            You can contact me on <a href="https://twitter.com/Yobai_Dev">Twitter</a>🐤 and on <a href='https://www.linkedin.com/in/yohan-baes-a8a219176/'>LinkedIn</a>🏢.</p>
+        </section>
       </main>
     </div>
   )
