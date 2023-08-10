@@ -11,9 +11,10 @@
   transform: translateY(-30px);
   transition: opacity 1s, transform 1s ease;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 8rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 
 .section1 {
@@ -23,13 +24,14 @@
   gap: 3rem;
   position: relative;
   max-width: 100%;
+  margin-top: 4rem;
 }
 
 .h1 {
   position: absolute;
   top: -50px;
   left: 31%;
-  font-size: 5.5vw;
+  font-size: 5.2vw;
   line-height: 1;
 }
 
@@ -44,9 +46,13 @@
 }
 
 .myDescription a {
-  color: #0080f6;
+  color: #8884FF;
   font-weight: bold;
   text-decoration: none;
+}
+
+.yohanPhoto {
+  filter: drop-shadow(rgba(0, 0, 0, 0.171) 10px 10px 20px);
 }
 
 /* ANIMATION */
@@ -60,4 +66,31 @@
 .onLoadVisible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.banner {
+  background-color: black;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.bannerText {
+  width: 100%;
+  display: inline-block;
+  animation: scrollText 20s linear infinite;
+  flex-shrink: 0;
+  color: #fafafa;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(-100%);
+  }
 }
