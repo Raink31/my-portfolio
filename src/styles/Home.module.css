@@ -68,24 +68,6 @@
   transform: translateY(0);
 }
 
-.banner {
-  background-color: black;
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  position: relative;
-  white-space: nowrap;
-  display: flex;
-}
-
-.bannerText {
-  width: 100%;
-  display: inline-block;
-  animation: scrollText 20s linear infinite;
-  flex-shrink: 0;
-  color: #fafafa;
-}
-
 @keyframes scrollText {
   from {
     transform: translate(100%);
