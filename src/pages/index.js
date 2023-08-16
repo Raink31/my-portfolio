@@ -1,12 +1,10 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import {useEffect, useState, useRef} from 'react';
 import gsap from 'gsap';
 
 import LayoutNav from '@/components/layoutNav'
 import homeStyles from '@/styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
