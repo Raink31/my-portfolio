@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
+import gsap from 'gsap';
 
 import LayoutNav from '@/components/layoutNav'
 import homeStyles from '@/styles/Home.module.css'
@@ -10,14 +11,42 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
   useEffect(() => {
-    setIsVisible(true)
+    setIsVisible(true);
+    requestAnimationFrame(animation)
   }, []);
+
+  const Slider = () => {
+    return (
+      <section className={homeStyles.sliderContainer}>
+        <div className={homeStyles.slider}>
+          <p ref={firstText}>Available for work</p>
+          <p ref={secondText}>Available for work</p>
+        </div>
+      </section>
+    )
+  }
+
+  const animation = () => {
+    if (xPercent <= -110) {
+      xPercent = 0
+    }
+    gsap.set(firstText.current, {xPercent: xPercent})
+    gsap.set(secondText.current, {xPercent: xPercent})
+    xPercent += 0.23 * direction;
+    requestAnimationFrame(animation);
+  }
 
   return (
     <div className={`${homeStyles.container}`}>
       <LayoutNav />
       <main className={`${homeStyles.main} ${isVisible && homeStyles.visible}`}>
+        <Slider />
         <section className={homeStyles.section1}>
           <Image
             className={homeStyles.yohanPhoto}

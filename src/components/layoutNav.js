@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
 import styles from './layout.module.css'
 
 export default function LayoutNav() {
@@ -18,9 +17,6 @@ export default function LayoutNav() {
           name="description"
           content="Visit my personal website portfolio."
         />
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-        </style>
       </Head>
       <header className={styles.header}>
         <Link href="/" className={styles.logo}> 
