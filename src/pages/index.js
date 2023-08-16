@@ -23,20 +23,20 @@ export default function Home() {
     return (
       <section className={homeStyles.sliderContainer}>
         <div className={homeStyles.slider}>
-          <p ref={firstText}>Available for work</p>
-          <p ref={secondText}>Available for work</p>
+          <p ref={firstText}>Available for work - Available for work - Available for work - Available for work -</p>
+          <p ref={secondText}>Available for work - Available for work - Available for work - Available for work -</p>
         </div>
       </section>
     )
   }
 
   const animation = () => {
-    if (xPercent <= -110) {
+    if (xPercent <= -101) {
       xPercent = 0
     }
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
-    xPercent += 0.23 * direction;
+    xPercent += 0.05 * direction;
     requestAnimationFrame(animation);
   }
 
