@@ -1,12 +1,10 @@
 import Image from 'next/image'
-import { Poppins } from 'next/font/google'
 import {useEffect, useState, useRef} from 'react';
 import gsap from 'gsap';
 
 import LayoutNav from '@/components/layoutNav'
 import homeStyles from '@/styles/Home.module.css'
 
-const poppins = Poppins({ subsets: ['latin'] })
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +41,7 @@ export default function Home() {
   }
 
   return (
-    <div className={`${homeStyles.container} ${poppins.className}`}>
+    <div className={`${homeStyles.container}`}>
       <LayoutNav />
       <main className={`${homeStyles.main} ${isVisible && homeStyles.visible}`}>
         <Slider />
