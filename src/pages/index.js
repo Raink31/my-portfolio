@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsVisible(true);
-    requestAnimationFrame(animation)
+    requestAnimationFrame(animation);
   }, []);
 
   const Slider = () => {
@@ -47,6 +47,7 @@ export default function Home() {
         <Slider />
         <section className={homeStyles.section1}>
           <Image
+            onContextMenu={(e) => e.preventDefault()}
             className={homeStyles.yohanPhoto}
             priority
             src="/yohan.png"
