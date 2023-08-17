@@ -92,7 +92,7 @@
         background-color: #fafafa;
         top: 0;
         right: 0;
-        width: 60%;
+        width: 70%;
         height: 300vh;
     }
 
@@ -109,9 +109,7 @@
     }
 
     .nav a{
-    color: #47585C;
-    opacity: 70%;
-    font-size: 1.2em;
+    font-size: 1em;
     }
 
     /* Animation hamburger menu */
@@ -122,12 +120,14 @@
     }
     
     .header::before {
+        z-index: -100;
         opacity: 0;
         transition: opacity .4s cubic-bezier(.23, .53, .36, .85);
     }
 
     .header.menuActive {
         &::before {
+            z-index: 1;
             opacity: 100;
             transition: opacity .4s cubic-bezier(.23, .53, .36, .85);
         }
