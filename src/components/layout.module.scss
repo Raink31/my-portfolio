@@ -1,0 +1,190 @@
+.container {
+    max-width: 100vw;
+    max-height: 300vh;
+    padding: 0 0rem;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+}
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav a{
+    color: #47585C;
+    opacity: 70%;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    transition: opacity .3s ease;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* NAV */
+
+.nav a {
+    transition: opacity .3s ease;
+}
+
+.nav a:hover {
+    opacity: 100%;
+}
+
+.nav a::after {
+    content: "";
+    width: 0%;
+    display: block;
+    height: 3px;
+    transition: all .3s ease;
+    margin-top: 2px;
+    background-color: #47585C;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a.active {
+    opacity: 100%;
+}
+
+.nav a.active::after {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: #47585C;
+}
+
+.button {
+    display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+    .header, .container {
+        position: relative;
+        max-height: 300vh;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 9rem 0 0 3rem;
+        position: absolute;
+        z-index: 2;
+        background-color: #fafafa;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 300vh;
+    }
+
+    .header::before {
+        content: '';
+        background-color: rgba(70, 70, 70, 0.466);
+        z-index: 1;
+        position: absolute;
+        width: 300%;
+        height: 300vh;
+        top: 0;
+        left: -200%;
+        backdrop-filter: blur(8px);
+    }
+
+    .nav a{
+    color: #47585C;
+    opacity: 70%;
+    font-size: 1.5em;
+    }
+
+    /* Animation hamburger menu */
+
+    .nav {
+        transform: translateX(110%);
+        transition: all .8s cubic-bezier(.23, .53, .36, .85);
+    }
+    
+    .header::before {
+        opacity: 0;
+        transition: opacity .4s cubic-bezier(.23, .53, .36, .85);
+    }
+
+    .header.menuActive {
+        &::before {
+            opacity: 100;
+            transition: opacity .4s cubic-bezier(.23, .53, .36, .85);
+        }
+    }
+
+    .nav.menuActive {
+        transform: translateX(0%);
+        transition: all .8s cubic-bezier(.23, .53, .36, .85);
+    }
+
+    .button {
+    display: block;
+    position: fixed;
+    right: 0;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100000;
+    }
+
+    .burger {
+        width: 100%;
+        &::after, &::before {
+            content: "";
+            display: block;
+            width: 40%;
+            background-color: #47585C;
+            height: 3px;
+            margin: auto;
+            position: relative;
+            transition: all .4s ease;
+        }
+
+        &::after {
+            top: -5px;
+        }
+
+        &::before {
+            top: 5px;
+        }
+    }
+
+    .burgerActive {
+        &::after {
+            top: -1px;
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            top: 1px;
+            transform: rotate(-45deg);
+        }
+    }
+}

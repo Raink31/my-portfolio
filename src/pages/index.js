@@ -63,8 +63,8 @@ export default function Home() {
           <p className={homeStyles.myDescription}>
             Hi there ! My name is <a href="https://github.com/Raink31" target='_blank'>Yohan</a>👋
             I’m a self-taught developer based in France, and I like to create beautiful interfaces with excellent usability. 
-            You can contact me on <a href="https://twitter.com/Yobai_Dev" target='_blank'>Twitter</a>🐤 and
-            on <a href='https://www.linkedin.com/in/yohan-baes-a8a219176/' target='_blank'>LinkedIn</a>🏢.
+            You can contact me on <a href="https://twitter.com/Yobai_Dev" target='_blank'>Twitter</a>🐤, by <a href='mailto:yohan.baes97@gmail.com' >mail</a>✉️,
+            and on <a href='https://www.linkedin.com/in/yohan-baes-a8a219176/' target='_blank'>LinkedIn</a>🏢.
           </p>
         </section>
       </main>
