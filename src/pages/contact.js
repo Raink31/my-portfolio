@@ -21,6 +21,11 @@ export default function Home() {
       <LayoutNav />
       <main className={`${homeStyles.main} ${isVisible && homeStyles.visible}`}>
         <h1>Contact</h1>
+        <h1>Contact</h1>
+        <h1>Contact</h1>
+        <h1>Contact</h1>
+        <h1>Contact</h1>
+        <h1>Contact</h1>
       </main>
     </div>
   )
