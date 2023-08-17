@@ -85,14 +85,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 3rem;
+        gap: 4rem;
         padding: 9rem 0 0 3rem;
         position: absolute;
         z-index: 2;
         background-color: #fafafa;
         top: 0;
         right: 0;
-        width: 35%;
+        width: 50%;
         height: 300vh;
     }
 
@@ -111,7 +111,7 @@
     .nav a{
     color: #47585C;
     opacity: 70%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     }
 
     /* Animation hamburger menu */
@@ -140,9 +140,8 @@
 
     .button {
     display: block;
-    position: fixed;
+    position: sticky;
     right: 0;
-    margin: 20px;
     width: 100px;
     height: 100px;
     background-color: transparent;
